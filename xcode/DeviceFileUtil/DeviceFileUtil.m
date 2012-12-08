@@ -16,9 +16,9 @@
 //
 //------------------------------------
 
-NSString* toNSString(FREObject* str)
+NSString *toNSString(FREObject *str)
 {
-    NSString* nsStr = nil;
+    NSString *nsStr = nil;
     
     if(str)
     {
@@ -46,10 +46,10 @@ NSString* toNSString(FREObject* str)
 FREObject openWith(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
 {
     // Get main controller
-    UIWindow *keyWindow= [[UIApplication sharedApplication] keyWindow];
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     UIViewController *mainController = [keyWindow rootViewController];
     
-    // which path?
+    // Which path? bundle or doc?
     NSString *fileName = toNSString(argv[0]);
     NSString *basePath = toNSString(argv[1]);
     NSString *fileNameNoType = [fileName stringByDeletingPathExtension];
@@ -58,7 +58,7 @@ FREObject openWith(FREContext ctx, void* funcData, uint32_t argc, FREObject argv
       
     if ([basePath isEqualToString:@"bundle"])
     {        
-        // Get bundle file path
+        // Get bundle path
         fileURI= [[NSBundle mainBundle] pathForResource:fileNameNoType ofType:[fileName pathExtension]];
         [fileURI retain];
     }
