@@ -46,7 +46,6 @@
 		83A31830166B808A006798FF = {
 			isa = PBXGroup;
 			children = (
-				83A8C0181670ECC200A96A39 /* FlashRuntimeExtensions.h */,
 				83A31840166B808A006798FF /* DeviceFileUtil */,
 				83A3183D166B808A006798FF /* Frameworks */,
 				83A3183C166B808A006798FF /* Products */,
@@ -72,6 +71,7 @@
 		83A31840166B808A006798FF /* DeviceFileUtil */ = {
 			isa = PBXGroup;
 			children = (
+				83A8C0181670ECC200A96A39 /* FlashRuntimeExtensions.h */,
 				83A31845166B808A006798FF /* DeviceFileUtil.m */,
 				83A31841166B808A006798FF /* Supporting Files */,
 			);

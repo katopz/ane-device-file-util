@@ -1,1 +1,0 @@
-adt -package -target ane device-file-util.ane extension.xml -swc device-file-util.swc -platform iPhone-ARM library.swf libDeviceFileUtil.a

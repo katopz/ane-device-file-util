@@ -11,11 +11,13 @@ package
 	{
 		public function Main()
 		{
+			// for determine ready state
 			var tf:TextField;
 			addChild(tf = new TextField);
 			tf.autoSize = TextFieldAutoSize.LEFT;
 			tf.text = "click me!";
-				
+			
+			// wait for click
 			stage.addEventListener(MouseEvent.CLICK, function():void
 			{
 				// Example #1 : You will need foo.pdf in document directory
