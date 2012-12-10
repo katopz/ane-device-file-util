@@ -19,7 +19,7 @@ package
 			stage.addEventListener(MouseEvent.CLICK, function():void
 			{
 				// Example #1 : You will need foo.pdf in document directory
-				DeviceFileUtil.openWith("xcode.epub");
+				DeviceFileUtil.openWith("foo.pdf");
 				
 				// Example #2 : You will need foo.pdf in document directory
 				// DeviceFileUtil.openWith("foo.pdf", DeviceFileUtil.DOCUMENTS_DIR);
