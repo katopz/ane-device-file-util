@@ -6,15 +6,19 @@
 //  Copyright (c) 2012 Todsaporn Banjerdkit. All rights reserved.
 //
 
-#import "FlashRuntimeExtensions.h"
-
 #import <UIKit/UIKit.h>
 
 //------------------------------------
 //
-// Helper Methods.
+// FRE Helper.
 //
 //------------------------------------
+
+#import "FlashRuntimeExtensions.h"
+
+#define DEFINE_ANE_FUNCTION(fn) FREObject (fn)(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
+#define MAP_FUNCTION(fn, data) { (const uint8_t*)(#fn), (data), &(fn) }
+#define DISPATCH_STATUS_EVENT(extensionContext, code, level) FREDispatchStatusEventAsync((extensionContext), (uint8_t*)code, (uint8_t*)level)
 
 NSString *toNSString(FREObject *str)
 {
@@ -43,7 +47,7 @@ NSString *toNSString(FREObject *str)
 //
 //------------------------------------
 
-FREObject openWith(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+DEFINE_ANE_FUNCTION(openWith)
 {
     // Get main controller
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
@@ -91,22 +95,21 @@ FREObject openWith(FREContext ctx, void* funcData, uint32_t argc, FREObject argv
 
 //------------------------------------
 //
-// Required Methods.
+// FRE Required Methods.
 //
 //------------------------------------
 
 // The context initializer is called when the runtime creates the extension context instance.
 
-void DeviceFileUtilContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
+void DeviceFileUtilContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet)
 {
-	*numFunctionsToTest = 1;
-	FRENamedFunction* func = (FRENamedFunction*)malloc(sizeof(FRENamedFunction)*1);
+    static FRENamedFunction functionMap[] =
+    {
+        MAP_FUNCTION(openWith, NULL)
+    };
     
-	func[0].name = (const uint8_t*)"openWith";
-	func[0].functionData = NULL;
-	func[0].function = &openWith;
-    
-	*functionsToSet = func;
+    *numFunctionsToSet = sizeof( functionMap ) / sizeof( FRENamedFunction );
+	*functionsToSet = functionMap;
 }
 
 // The context finalizer is called when the extension's ActionScript code
