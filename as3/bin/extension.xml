@@ -1,6 +1,6 @@
-<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
   <id>com.debokeh.anes.utils.DeviceFileUtil</id>
-  <versionNumber>1</versionNumber>
+  <versionNumber>2</versionNumber>
   <platforms>
     <platform name="iPhone-ARM">
             <applicationDeployment>
