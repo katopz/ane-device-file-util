@@ -1,13 +1,13 @@
 ane-device-file-util
 ====================
 
-Adobe AIR Native Extensions (ANE) for open file with registered application on iOS.
+Adobe AIR Native Extensions (ANE) 64-bit for open file with registered application on iOS.
 e.g. Dropbox, Google Drive, TeamViewer, iBook, Cubby and else
 
 [<img src="http://a1275.phobos.apple.com/us/r1000/066/Purple/v4/e8/26/39/e82639ee-0203-17e4-1072-b196f6cfd71a/mzl.cdbyromz.320x480-75.jpg">](https://itunes.apple.com/us/app/postcat/id527138992?ls=1&mt=8)
 
 See in action here : [PostCat](https://itunes.apple.com/us/app/postcat/id527138992?ls=1&mt=8) <br>
-For commercial use you must [feed](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=katopz%40gmail%2ecom&lc=TH&item_name=tuna&item_number=tuna&button_subtype=services&no_note=0&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHostedGuest) my [cat](http://instagram.com/katopz) 
+For commercial use please [feed](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=katopz%40gmail%2ecom&lc=TH&item_name=tuna&item_number=tuna&button_subtype=services&no_note=0&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHostedGuest) my [cat](http://instagram.com/katopz) 
 any $ is welcome :)
 - - -
 
